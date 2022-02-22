@@ -3,15 +3,14 @@
 
 module.exports = function towelSort (num) {
   let newNum=[]
-  let newNumTwo=[]
-  num.forEach(Element=>{
-    newNum.push(Element.join(''))
+  num.forEach((Element)=>{
+    Element.forEach((Element) =>{
+      newNum.push(Element)
+    })
+    console.log(newNum)
   })
-  newNum=newNum.join('').split('')
-  newNum.forEach(Element=>{
-    newNumTwo.push(+Element)
-  })
-   newNumTwo.sort(function(a, b) {
+  newNum.sort(function(a, b) {
     return a - b;
   });
-  return (newNumTwo)
+  return (newNum)
+}
