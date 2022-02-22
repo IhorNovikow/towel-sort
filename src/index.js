@@ -4,7 +4,7 @@
 module.exports = function towelSort (num) {
   let newNum=[]
   let a=0
-  if (num==[]){
+  if (num==[]||num==undefined){
   return ([])
   }else{num.forEach((Element)=>{
   a=a+1
