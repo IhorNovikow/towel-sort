@@ -3,14 +3,20 @@
 
 module.exports = function towelSort (num) {
   let newNum=[]
+  let a=0
   num.forEach((Element)=>{
+  a=a+1
+  if (a%2 !=0){  
+    console.log(a)
     Element.forEach((Element) =>{
+    newNum.push(Element)
+    })
+    }else{
+      Element = Element.reverse() 
+      Element.forEach((Element) =>{
       newNum.push(Element)
     })
-    console.log(newNum)
+    }
   })
-  newNum.sort(function(a, b) {
-    return a - b;
-  });
   return (newNum)
 }
